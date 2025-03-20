@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هل تحبني؟</title>
+    <style>
+        body {
+            background-color: #87CEEB;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        img {
+            width: 300px;
+            margin-top: 20px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no {
+            background-color: #FF6347;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>هل تحبني؟ 🧸❤️</h1>
+    <img src="./f806a20e-f138-4d8f-a15f-ea5bf1b73253.webp" alt="Teddy Bear Walking to Hug">
+    <div class="buttons">
+        <button class="yes" onclick="loveMe()">نعم</button>
+        <button class="no" onmouseover="moveNoButton()">لا</button>
+    </div>
+    
+    <script>
+        function loveMe() {
+            window.location.href = "love.html";
+        }
+        
+        function moveNoButton() {
+            let button = document.querySelector('.no');
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
